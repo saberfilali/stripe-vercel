@@ -33,12 +33,13 @@ module.exports = async (req, res) => {
           quantity: 1
         }
       ],
-      success_url: "https://example.com/success",
-      cancel_url: "https://example.com/cancel"
+      success_url: "https://ecommerce0.com/cartepayementpage?status=success",
+      cancel_url: "https://ecommerce0.com/cartepayementpage?status=cancel"
     });
 
     return res.status(200).json({ url: session.url });
   } catch (e) {
     return res.status(500).json({ error: e.message });
   }
+
 };
